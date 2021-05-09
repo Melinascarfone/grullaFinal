@@ -1,0 +1,320 @@
+@import "titulos";
+body{
+    margin: 0;
+}
+@mixin estiloP ($colorL, $tamañoL){
+    font-weight: 250%;
+    font-size: $tamañoL;
+    color: $colorL;
+    text-align: center;
+    text-transform: initial;
+    font-family: 'Sarabun', sans-serif;
+}
+@mixin estiloDiseños{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+@mixin estiloImg{
+    width: 100%;
+    height: 100%;
+}
+@mixin estiloSec{
+    background-color: white;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+.header{
+    background-color: #f5f5f5;
+    width: 100%;
+    height: 100%;
+    display: inline;
+    font-size: 150%;
+    padding: 0;
+    font-family: 'Questrial', sans-serif; 
+ &__ul{
+     background-color: whitesmoke;
+     display: grid;
+     padding: 0;
+     margin: 0;
+     grid-template-columns: 20% 20% 20% 20% 20%;
+     justify-items: center;
+     align-items: center;
+ }
+ &__li{
+     display: inline;
+     padding: 6%;
+     margin: 0%;
+ }
+ a{
+    text-decoration: none;
+ }
+}
+hr{
+    margin: auto;
+}
+.foot{
+    background-color: whitesmoke;
+    font-weight: 100;
+    font-size: 120%;
+    text-align: center;
+    text-transform:initial;
+    padding: 2%;
+    font-family: 'Cantarell', sans-serif;
+    &__p{
+        @include estiloP (rgb(0, 0, 90) , 100%);
+    }
+    &__cont{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    &__ig{
+        font-size: 30px;
+        color:  rgb(0, 0, 90);
+    }
+}
+.diseño{
+    @include estiloDiseños;
+    grid-template-columns: 65% 35%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas:  
+                       "foto15 foto10"
+                       "foto15 foto1";
+    &__quin{
+        @include estiloImg;
+        grid-area: foto15;
+    }
+    &__diez{
+        @include estiloImg;
+        grid-area: foto10;
+    }
+    &__uno{
+        @include estiloImg;
+        grid-area: foto1;
+    }
+}
+.diseñoU{
+    @include estiloDiseños;
+    grid-template-columns: 35% 65%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas:  
+                       "foto17 foto2"
+                       "foto4 foto2";
+    &__dsiete{
+        @include estiloImg;
+        grid-area: foto17;
+    }
+    &__dos{
+        @include estiloImg;
+        grid-area: foto2;
+    }
+    &__cua{
+        @include estiloImg;
+        grid-area: foto4;
+    }
+}
+.diseñoD{  
+    @include estiloDiseños;
+    grid-template-columns: 65% 35%;
+    grid-template-rows: 50% 50%;
+    grid-template-areas:  
+                       "foto7 foto9"
+                       "foto7 foto3";
+    &__siete{
+        @include estiloImg;
+        grid-area: foto7;
+    }
+    &__nueve{
+        @include estiloImg;
+        grid-area: foto9;
+    }
+    &__tres{
+        @include estiloImg;
+        grid-area: foto3;
+    }
+}
+.contenedor{
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: space-between;
+    &__imgu{
+        width: 300px;
+        height: 300px;
+    }
+    &__h{
+        font-weight: 100%;
+        font-size: 150%;
+        text-align: center;
+        color:gray;
+        font-family: 'Sarabun', sans-serif;
+        &:hover{
+            text-align: center;
+            transform: scale(1,2);
+        }
+    }
+}
+.contenedord{
+    @extend .contenedor;
+    &__imgd{
+        width: 300px;
+        height: 300px;
+    }
+    &__ht{
+        font-weight: 100%;
+        font-size: 150%;
+        text-align: center;
+        color:gray;
+        font-family: 'Sarabun', sans-serif;
+        &:hover{
+            text-align: center;
+            transform: scale(2,2);
+        }
+    }
+}
+.caja{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10%;
+    &__estilo{
+        color:rgb(0, 0, 90);
+        font-family: 'Cantarell', sans-serif;
+        font-size: 300%;
+        margin-bottom: 5%;
+    }
+    &__p{
+        @include estiloP (black , 150%);
+    }
+}
+section{
+    @include estiloSec;
+    form{
+        margin: 2%;
+        font-weight: 250%;
+        font-size: 120%;
+        text-align: center;
+        text-transform: initial;
+        font-family: 'Sarabun', sans-serif;
+        p{
+            @include estiloP (black , 150%);
+        }
+        hr{
+            color: gray;
+            margin-top: 4%;
+            margin-bottom: 4%;
+            margin-left: 30%;
+            margin-right: 30%;
+        }
+        div{
+            p{
+                @include estiloP (black , 150%);
+            }
+            div{
+                margin: auto;
+                width: 0;
+            } 
+            div{
+                margin: auto;
+                width: 0;
+            }
+            .mb-3{
+                width: 100%;
+            }
+        }
+    }
+}
+section{
+    @include estiloSec;
+    .produ{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 50% 50%;
+        grid-template-areas: 
+                       "img1 ul1"
+                       "ul2 img2";
+        justify-items: center;
+        align-items: center;
+        &__img{
+            @include estiloImg;
+            grid-area: img1;
+        }
+        &__ul{ 
+            grid-area: ul1;
+            font-size: 150%;
+        }
+        &__hc{
+            font-family: 'Cantarell', sans-serif;
+            text-align: center;
+            &:hover{
+                text-align: center;
+                transform: scale(2,2);
+            }
+        }
+        &__li{
+            font-family: 'Sarabun', sans-serif;
+        }
+        &__ul--dos{
+            grid-area: ul2;
+            font-size: 150%;
+            h4{
+                text-align: center;
+            }
+        }
+        &__img--dos{
+            @include estiloImg;
+            grid-area: img2;
+        }
+    }
+}
+@media only screen and (max-width: 480px){
+    .header__ul{
+        grid-template-columns: 100%;
+        grid-template-rows: 20% 20% 20% 20% 20%;
+    }  
+    #pro{
+        background-color: white;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+    }  
+    .contenedor{
+        background-color: white;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+    }
+    #formUno{
+        margin: 2%;
+        font-weight: 250%;
+        font-size: 80%;
+        text-align: center;
+        text-transform: initial;
+        font-family: 'Sarabun', sans-serif;
+    }
+}
+@media only screen and (max-width: 780px){
+    #grilla{
+        grid-template-columns: 100%;
+        grid-template-rows: 20% 20% 50% 10%;
+    }
+    .contenedor{
+        background-color: white;
+        width: 100%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

@@ -1,0 +1,18 @@
+@mixin estiloTitulos{
+    background-color: white;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
+    color: rgb(0, 0, 90); 
+    font-family: 'Cantarell', sans-serif;
+    font-size: 200%;
+}
+h1{
+    @include estiloTitulos;
+    padding-top: 20px;
+}
+h2{
+    @include estiloTitulos;
+    font-size: 140%;
+    padding-bottom: 20px;
+}

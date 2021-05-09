@@ -1,0 +1,25 @@
+{
+  "name": "agendas",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path scss scss/miestilo.scss css/estilo.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^5.0.0",
+    "nodemon": "^2.0.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Melinascarfone/grullaagendas.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Melinascarfone/grullaagendas/issues"
+  },
+  "homepage": "https://github.com/Melinascarfone/grullaagendas#readme",
+  "description": ""
+}
